@@ -18,17 +18,18 @@ public class Player : MonoBehaviour {
         Vector3 pos = transform.position;
         time_ += 1.0f * Time.deltaTime;
         //ジャンプ
-        if (time_ % waruTime_ < 0.03f &&isJump_==false)
+        /*if (time_ % waruTime_ < 0.03f &&isJump_==false)
         {
             isJump_ = true;
             pos.y += 1.2f;
             transform.position = pos;
             transform.rotation = new Quaternion(0, 0, 0, 0);
-        }
+        }*/
         
         //Spaceキーで前に進む
         if (Input.GetKeyDown(KeyCode.Space)){
             pos.z += 1.0f;
+            pos.y += 1.3f;
             transform.position = new Vector3(pos.x,pos.y,pos.z);
         }
         //Enterキーでリセット
