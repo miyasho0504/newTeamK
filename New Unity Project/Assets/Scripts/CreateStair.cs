@@ -19,6 +19,5 @@ public class CreateStair : MonoBehaviour {
         if(time_%0.5f<0.02f){//割る時間＝生成する間隔
             Instantiate(stair_, new Vector3(0.0f, 9.0f, 9.0f), new Quaternion(0, 0, 0, 0));
         }
-        
 	}
 }
