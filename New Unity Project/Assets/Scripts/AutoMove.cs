@@ -4,7 +4,7 @@ using System.Collections;
 //自動で移動する挙動の制御(プレイヤーと階段)
 public class AutoMove : MonoBehaviour {
     
-    public float setTime_ = 0.5f;//自動移動の1回目が起こるまでの時間
+    public float setTime_ = 0.4f;//自動移動の1回目が起こるまでの時間
     private float intervalTime_;
     public GameObject stair_;
     public float moveYZ_=0.2f;//どれだけ大きく移動させるか
@@ -42,8 +42,5 @@ public class AutoMove : MonoBehaviour {
                 automove1_ = false;
             }
         }
-        
-        
-
 	}
 }
