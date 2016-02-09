@@ -86,6 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceeccd11008115e408bd771ac491907a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bpm_: 120
   setTime_: .5
   stair_: {fileID: 103314}
   moveYZ_: .200000003
@@ -119,6 +120,10 @@ Prefab:
       propertyPath: stair_
       value: 
       objectReference: {fileID: 103314}
+    - target: {fileID: 0}
+      propertyPath: bpm_
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103314}
