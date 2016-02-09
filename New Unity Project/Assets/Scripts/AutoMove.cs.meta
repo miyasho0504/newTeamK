@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: ceeccd11008115e408bd771ac491907a
-timeCreated: 1454909715
+timeCreated: 1455029428
 licenseType: Pro
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - stair_: {fileID: 103314, guid: e2e9f68459a5a2f4f9097236c9fe2dd1, type: 2}
+  - stair_: {fileID: 118360, guid: 64029df090d64974ba650d771bd08a5b, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

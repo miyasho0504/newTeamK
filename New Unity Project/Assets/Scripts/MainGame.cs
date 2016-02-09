@@ -7,7 +7,7 @@ public class MainGame : MonoBehaviour {
     private AudioSource audioSource;
     private bool play_bgm_=false;
 
-    public static float bpm_=147;
+    public static float bpm_=80;
 
     public GameObject Count1_;
     public GameObject Count2_;
