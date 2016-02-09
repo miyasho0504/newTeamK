@@ -3,16 +3,18 @@ using System.Collections;
 
 //自動で移動する挙動の制御(プレイヤーと階段)
 public class AutoMove : MonoBehaviour {
-    public float bpm_ = 60;
     public float setTime_;//自動移動の1回目が起こるまでの時間
     private float intervalTime_;
     public GameObject stair_;
-    public float moveYZ_=0.2f;//どれだけ大きく移動させるか
+    public static float moveYZ_=0.2f;//どれだけ大きく移動させるか
     private bool automove1_=false;//自動移動の1回目(大きめの移動)がなされたか
     public static bool automove_ = false;//自動移動を行うか否か
+
+    private bool create_stair_=false;//自分のクローンを作成したかどうか(階段の自動生成のため)※一度だけ使用する 
+    
     // Use this for initialization
 	void Start () {
-        setTime_ = 60.0f / bpm_;//BPMから次のジャンプまでの時間を計算する
+        setTime_ = 60.0f / MainGame.bpm_;//MainGameスクリプトにあるstatic変数BPMを使って次のジャンプまでの時間を計算する
         intervalTime_ = setTime_;
 	}
 	
@@ -44,6 +46,11 @@ public class AutoMove : MonoBehaviour {
                     pos.z += moveYZ_;
                     transform.position = pos;
                     automove1_ = false;
+                    if (pos.y<=0&&gameObject.tag == "stair"&&create_stair_==false)
+                    {
+                        Instantiate(stair_, new Vector3(0.0f, 9.0f, 9.0f), new Quaternion(0, 0, 0, 0));
+                        create_stair_ = true;
+                    }
                 }
             }
         }

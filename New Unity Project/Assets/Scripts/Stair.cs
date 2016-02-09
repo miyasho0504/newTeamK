@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Stair : MonoBehaviour {
-    
+    public bool create_clone_;
 	// Use this for initialization
 	void Start () {
 	    

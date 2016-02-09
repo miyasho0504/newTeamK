@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11479582}
   m_Layer: 0
   m_Name: stair
-  m_TagString: Untagged
+  m_TagString: stair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,8 +50,10 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -86,10 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceeccd11008115e408bd771ac491907a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm_: 120
-  setTime_: .5
+  setTime_: 0.5
   stair_: {fileID: 103314}
-  moveYZ_: .200000003
 --- !u!114 &11480868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f5d61e6504867e41ace8b3a72a55371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  create_clone_: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -123,6 +124,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: bpm_
       value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: stair
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

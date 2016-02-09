@@ -5,6 +5,9 @@ public class MainGame : MonoBehaviour {
     public float startTime_ = 5.0f;//何秒後にスタートさせるか
     public AudioClip bgm_;
     private AudioSource audioSource;
+    private bool play_bgm_=false;
+
+    public static float bpm_=147;
 
     public GameObject Count1_;
     public GameObject Count2_;
@@ -27,10 +30,15 @@ public class MainGame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (play_bgm_ == false)
+        {
+            audioSource.Play();
+            play_bgm_ = true;
+        }
         if (AutoMove.automove_ == false)
         {
             startTime_ -= Time.deltaTime;
-            //カウントダウン
+            //カウントダウン開始(パネル生成)
             if(startTime_<=3.0f&&panel_created_==false){
                 Instantiate(CountStart_);
                 Instantiate(Count1_);
@@ -55,7 +63,7 @@ public class MainGame : MonoBehaviour {
                 GameObject.Destroy(panel1);
                 panel1_deleted_ = true;
                 AutoMove.automove_ = true;
-                audioSource.Play();
+                //audioSource.Play();
             }
         }
         else
