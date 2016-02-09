@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
         //Spaceキーで前に進む
         if (Input.GetKeyDown(KeyCode.Space)){
             pos.z += 1.0f;
-            pos.y += 1.3f;
+            pos.y += 1.1f;
             transform.position = new Vector3(pos.x,pos.y,pos.z);
         }
         //Enterキーでリセット
