@@ -624,7 +624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime_: 4
-  bgm_: {fileID: 0}
+  bgm_: {fileID: 8300000, guid: 5d356cdeb40b679488aa1a69fb9bfdce, type: 3}
   Count1_: {fileID: 119266, guid: 6ec9bc58ba3eb664ba4a4de9c5f4f52f, type: 2}
   Count2_: {fileID: 107168, guid: 1fd82988a945d2f4684812ab85126226, type: 2}
   Count3_: {fileID: 123974, guid: bff33e5166a53e949ab2a2eb3e353dcb, type: 2}
