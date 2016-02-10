@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
     private float time_;
-    public float waruTime_=0.5f;
+    //public float waruTime_=0.5f;
 
     private bool isJump_=false;//ジャンプ中か
 
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {        
         Vector3 pos = transform.position;
-        time_ += 1.0f * Time.deltaTime;
+        
         //ジャンプ
         /*if (time_ % waruTime_ < 0.03f &&isJump_==false)
         {
@@ -26,11 +26,33 @@ public class Player : MonoBehaviour {
         }*/
         
         //Spaceキーで前に進む
-        if (Input.GetKeyDown(KeyCode.Space)){
+        /*if (Input.GetKeyDown(KeyCode.Space)){
             pos.z += 1.0f;
             pos.y += 1.1f;
             transform.position = new Vector3(pos.x,pos.y,pos.z);
+        }*/
+        //キーが何秒押されているかを判定する
+        if (Input.GetKey(KeyCode.Space))
+        {
+            time_ += Time.deltaTime;
         }
+        //キーが離される＆ジャンプ中でない
+        if(Input.GetKeyUp(KeyCode.Space)&&isJump_==false){
+            isJump_ = true;
+            float setTime_ = (60.0f / MainGame.bpm_)-0.1f;
+            //1回のジャンプ以上に溜めていたら
+            if(time_<setTime_){
+                pos.z += 1.0f;
+                pos.y += 1.1f;
+                transform.position = new Vector3(pos.x,pos.y,pos.z);
+            }else{
+                pos.z += 2.0f;
+                pos.y += 2.1f;
+                transform.position = new Vector3(pos.x, pos.y, pos.z);
+            }
+            time_=0.0f;
+        }
+
         //Enterキーでリセット
         /*
         if (Input.GetKeyDown(KeyCode.Return))
