@@ -4,8 +4,9 @@ using System.Collections;
 public class Player : MonoBehaviour {
     private float time_;
     //public float waruTime_=0.5f;
-
-    private bool isJump_=false;//ジャンプ中か
+    public static bool ablejump_=true;//ジャンプすることは可能か
+    public static bool sudenijump_ = false;//既に1回ジャンプしたか
+    public static bool tyakuti_ = false;//着地したか
 
 	// Use this for initialization
 	void Start () {
@@ -37,18 +38,26 @@ public class Player : MonoBehaviour {
             time_ += Time.deltaTime;
         }
         //キーが離される＆ジャンプ中でない
-        if(Input.GetKeyUp(KeyCode.Space)&&isJump_==false){
-            isJump_ = true;
+        if(Input.GetKeyUp(KeyCode.Space)){
+            sudenijump_ = true;
             float setTime_ = (60.0f / MainGame.bpm_)-0.1f;
             //1回のジャンプ以上に溜めていたら
-            if(time_<setTime_){
-                pos.z += 1.0f;
-                pos.y += 1.1f;
-                transform.position = new Vector3(pos.x,pos.y,pos.z);
-            }else{
-                pos.z += 2.0f;
-                pos.y += 2.1f;
-                transform.position = new Vector3(pos.x, pos.y, pos.z);
+            if (ablejump_ == true)
+            {
+                if (time_ < setTime_)
+                {
+                    tyakuti_ = false;
+                    pos.z += 1.0f;
+                    pos.y += 1.05f;
+                    transform.position = new Vector3(pos.x, pos.y, pos.z);
+                }
+                else
+                {
+                    tyakuti_ = false;
+                    pos.z += 2.0f;
+                    pos.y += 2.0f;
+                    transform.position = new Vector3(pos.x, pos.y, pos.z);
+                }
             }
             time_=0.0f;
         }
@@ -61,8 +70,11 @@ public class Player : MonoBehaviour {
             transform.rotation = new Quaternion(0, 0, 0, 0);
         }*/
 	}
-    void OnCollisionEnter()
+    void OnCollisionEnter(Collision col)
     {
-        isJump_ = false;
+        Debug.Log("OK");
+        if(col.gameObject.tag=="stair"){
+            tyakuti_ = true;
+        }
     }
 }

@@ -26,6 +26,20 @@ public class AutoMove : MonoBehaviour {
         if (automove_ == true)
         {
             intervalTime_ -= Time.deltaTime;
+            //プレイヤーがジャンプ可能であるか
+            if (Player.sudenijump_ == false&&Player.tyakuti_==true)
+            {
+                if (gameObject.tag == "Player")
+                {
+                    Player.ablejump_ = true;
+                    Debug.Log("ablejump=true");
+                }
+            }
+            else { 
+                Player.ablejump_ = false;
+                Debug.Log("ablejump=false");
+            }
+            //自動移動
             if (intervalTime_ <= 0.1)//0.1秒前から判定を入れる
             {
                 pos = transform.position;               //大きく移動させる前のポジションを記録
@@ -47,7 +61,11 @@ public class AutoMove : MonoBehaviour {
                     pos.z += moveYZ_;
                     transform.position = pos;
                     automove1_ = false;
-                    if (pos.y<=-1.0&&gameObject.tag == "stair"&&create_stair_==false)
+                    if(gameObject.tag=="Player"){
+                        Player.sudenijump_ = false;
+                        Debug.Log("sudenijump=false");
+                    }
+                    if (pos.y <= -1.0 && gameObject.tag == "stair" && create_stair_ == false)
                     {
                         //一度RendererとColliderを有効化する(これをしないと自身が複製される仕様上穴からは穴しか生成されず死ぬ)
                         GameObject ownChild = gameObject.transform.FindChild("stair_body").gameObject;
@@ -56,9 +74,10 @@ public class AutoMove : MonoBehaviour {
                         ownRend_.enabled = true;
                         ownCol_.enabled = true;
 
-                        GameObject st=Instantiate(stair_, new Vector3(0.0f, 9.0f, 9.0f), new Quaternion(0, 0, 0, 0))as GameObject;
+                        GameObject st = Instantiate(stair_, new Vector3(0.0f, 9.0f, 9.0f), new Quaternion(0, 0, 0, 0)) as GameObject;
                         Stair.holeNumCount_++; Debug.Log(Stair.holeNumCount_);
-                        if(Stair.holeNumCount_%7==0){
+                        if (Stair.holeNumCount_ % 7 == 0)
+                        {
                             GameObject stchild = st.transform.FindChild("stair_body").gameObject;
                             Renderer rend_ = stchild.GetComponent<Renderer>();
                             Collider col_ = stchild.GetComponent<Collider>();
@@ -72,6 +91,10 @@ public class AutoMove : MonoBehaviour {
                     }
                 }
             }
+        }
+        else
+        {
+            
         }
 	}
 }

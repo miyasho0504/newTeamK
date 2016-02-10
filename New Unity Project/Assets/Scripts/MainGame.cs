@@ -37,6 +37,7 @@ public class MainGame : MonoBehaviour {
         }
         if (AutoMove.automove_ == false)
         {
+            Player.ablejump_ = false;
             startTime_ -= Time.deltaTime;
             //カウントダウン開始(パネル生成)
             if(startTime_<=3.0f&&panel_created_==false){

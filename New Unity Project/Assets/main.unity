@@ -384,7 +384,7 @@ GameObject:
   - 114: {fileID: 1845983284}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,7 +440,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1845983281
 MeshFilter:
@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637c55bdf94a72b4291f90c0a641fa01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime_: 15
+  startTime_: 4
   bgm_: {fileID: 0}
   Count1_: {fileID: 119266, guid: 6ec9bc58ba3eb664ba4a4de9c5f4f52f, type: 2}
   Count2_: {fileID: 107168, guid: 1fd82988a945d2f4684812ab85126226, type: 2}
