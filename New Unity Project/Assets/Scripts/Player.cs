@@ -47,15 +47,15 @@ public class Player : MonoBehaviour {
                 if (time_ < setTime_)
                 {
                     tyakuti_ = false;
-                    pos.z += 1.0f;
-                    pos.y += 1.05f;
+                    pos.z += 0.05f;
+                    pos.y += 0.05f+0.005f;
                     transform.position = new Vector3(pos.x, pos.y, pos.z);
                 }
                 else
                 {
                     tyakuti_ = false;
-                    pos.z += 2.0f;
-                    pos.y += 2.0f;
+                    pos.z += 0.1f;
+                    pos.y += 0.1f;
                     transform.position = new Vector3(pos.x, pos.y, pos.z);
                 }
             }

@@ -14,7 +14,7 @@ public class Stair : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 pos = transform.position;
-        if(pos.y<-2.0f){
+        if(pos.y<-0.3f){
             Destroy(gameObject);
 			score += 10;
 			Debug.Log("score" + score);

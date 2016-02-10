@@ -9,7 +9,7 @@ public class CreateStair : MonoBehaviour {
         time_ = 0.0f;
         for (int i = 0; i < 10; i++)
         {
-            Instantiate(stair_, new Vector3(0.0f, i * 1.0f, i * 1.0f), new Quaternion(0, 0, 0, 0));
+            Instantiate(stair_, new Vector3(0.0f, i * 0.05f, i * 0.05f), new Quaternion(0, 0, 0, 0));
         }
 	}
 	

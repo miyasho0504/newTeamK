@@ -6,7 +6,7 @@ public class AutoMove : MonoBehaviour {
     public float setTime_;//自動移動の1回目が起こるまでの時間
     private float intervalTime_;
     public GameObject stair_;
-    public static float moveYZ_=0.2f;//どれだけ大きく移動させるか
+    public static float moveYZ_=0.01f;//どれだけ大きく移動させるか
     private bool automove1_=false;//自動移動の1回目(大きめの移動)がなされたか
     public static bool automove_ = false;//自動移動を行うか否か
 
@@ -47,8 +47,8 @@ public class AutoMove : MonoBehaviour {
                 //まずは移動させたい距離より大きめに移動させて
                 if (automove1_ == false)
                 {
-                    pos.y -= 1.0f * scale.y + moveYZ_;
-                    pos.z -= 1.0f * scale.z + moveYZ_;
+                    pos.y -=0.05f + moveYZ_;
+                    pos.z -=0.05f + moveYZ_;
                     transform.position = pos;
                     automove1_ = true;
                 }
@@ -65,7 +65,7 @@ public class AutoMove : MonoBehaviour {
                         Player.sudenijump_ = false;
                         Debug.Log("sudenijump=false");
                     }
-                    if (pos.y <= -1.0 && gameObject.tag == "stair" && create_stair_ == false)
+                    if (pos.y <= -0.05 && gameObject.tag == "stair" && create_stair_ == false)
                     {
                         //一度RendererとColliderを有効化する(これをしないと自身が複製される仕様上穴からは穴しか生成されず死ぬ)
                         GameObject ownChild = gameObject.transform.FindChild("stair_body").gameObject;
@@ -73,8 +73,8 @@ public class AutoMove : MonoBehaviour {
                         Collider ownCol_ = ownChild.GetComponent<Collider>();
                         ownRend_.enabled = true;
                         ownCol_.enabled = true;
-
-                        GameObject st = Instantiate(stair_, new Vector3(0.0f, 9.0f, 9.0f), new Quaternion(0, 0, 0, 0)) as GameObject;
+                        //Debug.Log("A");
+                        GameObject st = Instantiate(stair_, new Vector3(0.0f, 0.45f, 0.45f), new Quaternion(0, 0, 0, 0)) as GameObject;
                         Stair.holeNumCount_++; Debug.Log(Stair.holeNumCount_);
                         if (Stair.holeNumCount_ % 7 == 0)
                         {
