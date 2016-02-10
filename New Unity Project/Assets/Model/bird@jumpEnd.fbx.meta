@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: e26f8b9c0fa390942b6666eb2cdb3cb8
+timeCreated: 1455084759
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: body
+    100004: Camera
+    100006: Chest
+    100008: Core
+    100010: eye_a
+    100012: eyecover_a
+    100014: eyepit_a
+    100016: foots
+    100018: hair
+    100020: Head
+    100022: head
+    100024: Lamp
+    100026: Lamp1
+    100028: LeftArm
+    100030: LeftFoot
+    100032: LeftLeg
+    100034: LeftShoulder
+    100036: LeftToe
+    100038: legs
+    100040: model_bird_a3_mqo
+    100042: model_bird_a3_mqo1
+    100044: Neck
+    100046: RightArm
+    100048: RightFoot
+    100050: RightLeg
+    100052: RightShoulder
+    100054: RightToe
+    100056: transform1
+    100058: transform2
+    100060: transform3
+    100062: transform4
+    100064: transform5
+    100066: transform6
+    100068: transform7
+    100070: transform8
+    100072: transform9
+    100074: Waist
+    100076: wings
+    400000: //RootNode
+    400002: body
+    400004: Camera
+    400006: Chest
+    400008: Core
+    400010: eye_a
+    400012: eyecover_a
+    400014: eyepit_a
+    400016: foots
+    400018: hair
+    400020: Head
+    400022: head
+    400024: Lamp
+    400026: Lamp1
+    400028: LeftArm
+    400030: LeftFoot
+    400032: LeftLeg
+    400034: LeftShoulder
+    400036: LeftToe
+    400038: legs
+    400040: model_bird_a3_mqo
+    400042: model_bird_a3_mqo1
+    400044: Neck
+    400046: RightArm
+    400048: RightFoot
+    400050: RightLeg
+    400052: RightShoulder
+    400054: RightToe
+    400056: transform1
+    400058: transform2
+    400060: transform3
+    400062: transform4
+    400064: transform5
+    400066: transform6
+    400068: transform7
+    400070: transform8
+    400072: transform9
+    400074: Waist
+    400076: wings
+    4300000: model_bird_a3_mqo1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: model_bird_a3_mqo1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
