@@ -76,5 +76,8 @@ public class Player : MonoBehaviour {
         if(col.gameObject.tag=="stair"){
             tyakuti_ = true;
         }
+		if (col.gameObject.tag == "Finish") {
+			Destroy (this.gameObject);
+		}
     }
 }
