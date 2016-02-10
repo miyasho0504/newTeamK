@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Stair : MonoBehaviour {
+    public static int holeNumCount_=0;//穴を作る用、今何個目か
     public bool create_clone_;
 	// Use this for initialization
 	void Start () {

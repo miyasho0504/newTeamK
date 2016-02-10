@@ -68,6 +68,10 @@ public class MainGame : MonoBehaviour {
         }
         else
         {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                bpm_ += 60;
+            }
             //ゲームが終了したら
             if (gameEnd_ == true) { }   
         }

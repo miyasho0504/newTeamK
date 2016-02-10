@@ -41,14 +41,33 @@ public class AutoMove : MonoBehaviour {
                 //0.1秒後に元に戻す(ただし自動移動の1回目が行われてから)
                 if (intervalTime_ <= 0.0 && automove1_ == true)
                 {
+                    setTime_ = 60.0f / MainGame.bpm_;
                     intervalTime_ = setTime_;
                     pos.y += moveYZ_;
                     pos.z += moveYZ_;
                     transform.position = pos;
                     automove1_ = false;
-                    if (pos.y<=0&&gameObject.tag == "stair"&&create_stair_==false)
+                    if (pos.y<=-1.0&&gameObject.tag == "stair"&&create_stair_==false)
                     {
-                        Instantiate(stair_, new Vector3(0.0f, 9.0f, 9.0f), new Quaternion(0, 0, 0, 0));
+                        //一度RendererとColliderを有効化する(これをしないと自身が複製される仕様上穴からは穴しか生成されず死ぬ)
+                        GameObject ownChild = gameObject.transform.FindChild("stair_body").gameObject;
+                        Renderer ownRend_ = ownChild.GetComponent<Renderer>();
+                        Collider ownCol_ = ownChild.GetComponent<Collider>();
+                        ownRend_.enabled = true;
+                        ownCol_.enabled = true;
+
+                        GameObject st=Instantiate(stair_, new Vector3(0.0f, 9.0f, 9.0f), new Quaternion(0, 0, 0, 0))as GameObject;
+                        Stair.holeNumCount_++; Debug.Log(Stair.holeNumCount_);
+                        if(Stair.holeNumCount_%7==0){
+                            GameObject stchild = st.transform.FindChild("stair_body").gameObject;
+                            Renderer rend_ = stchild.GetComponent<Renderer>();
+                            Collider col_ = stchild.GetComponent<Collider>();
+                            rend_.enabled = false;
+                            col_.enabled = false;
+                            //Stair_body s = stchild.GetComponent<Stair_body>();
+                            //s.delRendRig();
+                        }
+
                         create_stair_ = true;
                     }
                 }

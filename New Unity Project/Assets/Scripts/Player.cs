@@ -32,11 +32,12 @@ public class Player : MonoBehaviour {
             transform.position = new Vector3(pos.x,pos.y,pos.z);
         }
         //Enterキーでリセット
+        /*
         if (Input.GetKeyDown(KeyCode.Return))
         {
             transform.position = new Vector3(0.0f, 1.0f, -1.0f);
             transform.rotation = new Quaternion(0, 0, 0, 0);
-        }
+        }*/
 	}
     void OnCollisionEnter()
     {

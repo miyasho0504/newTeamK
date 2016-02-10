@@ -8,9 +8,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 459520}
+  - 114: {fileID: 11464658}
+  - 114: {fileID: 11462062}
   m_Layer: 0
   m_Name: stair_long
-  m_TagString: Untagged
+  m_TagString: stair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,8 +28,6 @@ GameObject:
   - 33: {fileID: 3397380}
   - 65: {fileID: 6534442}
   - 23: {fileID: 2398894}
-  - 114: {fileID: 11402528}
-  - 114: {fileID: 11487112}
   m_Layer: 0
   m_Name: stair_body
   m_TagString: stair
@@ -105,38 +105,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11402528
+--- !u!114 &11462062
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186840}
+  m_GameObject: {fileID: 118360}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f5d61e6504867e41ace8b3a72a55371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   create_clone_: 0
---- !u!114 &11487112
+--- !u!114 &11464658
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186840}
+  m_GameObject: {fileID: 118360}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceeccd11008115e408bd771ac491907a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setTime_: 0.5
-  stair_: {fileID: 186840}
+  setTime_: 0
+  stair_: {fileID: 118360}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: stair
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rend_
+      value: 
+      objectReference: {fileID: 2398894}
+    - target: {fileID: 0}
+      propertyPath: col_
+      value: 
+      objectReference: {fileID: 6534442}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 118360}

@@ -85,10 +85,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &280077193 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 2}
-  m_PrefabInternal: {fileID: 532300154}
 --- !u!1 &509601294
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,15 +208,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 2}
       propertyPath: m_LocalScale.x
-      value: .300000012
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 2}
+      propertyPath: m_Name
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 2}
@@ -351,11 +351,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1508329889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7850599, y: 0.44964552, z: -1.1098602}
-  m_LocalScale: {x: 3.3333333, y: 1, z: 1}
+  m_LocalPosition: {x: 0.235518, y: 0.44964552, z: -1.1098602}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 280077193}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!114 &1508329891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1dfb4c0731f9145bf3e8fcda58fcac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stair_: {fileID: 103314, guid: e2e9f68459a5a2f4f9097236c9fe2dd1, type: 2}
+  stair_: {fileID: 118360, guid: 64029df090d64974ba650d771bd08a5b, type: 2}
 --- !u!1 &1845983277
 GameObject:
   m_ObjectHideFlags: 0
