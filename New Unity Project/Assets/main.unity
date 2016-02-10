@@ -278,6 +278,10 @@ Prefab:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 2}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 2}
   m_IsPrefabParent: 0
@@ -743,6 +747,7 @@ MonoBehaviour:
   Count2_: {fileID: 107168, guid: 1fd82988a945d2f4684812ab85126226, type: 2}
   Count3_: {fileID: 123974, guid: bff33e5166a53e949ab2a2eb3e353dcb, type: 2}
   CountStart_: {fileID: 178234, guid: 93da167b77aee344282f9263b590776d, type: 2}
+  TitleP_: {fileID: 0}
 --- !u!4 &2092885528
 Transform:
   m_ObjectHideFlags: 0
