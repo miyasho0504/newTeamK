@@ -4,6 +4,8 @@ using System.Collections;
 public class Stair : MonoBehaviour {
     public static int holeNumCount_=0;//穴を作る用、今何個目か
     public bool create_clone_;
+	static int score = 0;
+
 	// Use this for initialization
 	void Start () {
 	    
@@ -14,6 +16,8 @@ public class Stair : MonoBehaviour {
         Vector3 pos = transform.position;
         if(pos.y<-2.0f){
             Destroy(gameObject);
+			score += 10;
+			Debug.Log("score" + score);
         }
 	}
 }
